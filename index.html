@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ЖИ монтаж курсы</title>
+<meta name="description" content="ЖИ арқылы рилсті 10 минутта монтаждаңыз — тек телефонмен. Түсірмей-ақ видео: ЖИ дауыс, анимация, мульт. Бонус: үйде кинодағыдай түсіру.">
+<meta property="og:title" content="ЖИ арқылы рилсті 10 минутта монтаждаңыз">
+<meta property="og:description" content="Тек телефон. Түсірмей-ақ видео: ЖИ дауыс, анимация, мульт. Дінмохаммед Дәулетұлы.">
+<meta property="og:image" content="https://dimashdauletuly.github.io/img/og.jpg">
+<meta property="og:url" content="https://dimashdauletuly.github.io/">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#120c08">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#120c08; --card:#1f150f; --card2:#2a1c13;
+  --line:rgba(236,205,168,.12); --line2:rgba(236,205,168,.22);
+  --text:#f4e9dc; --muted:#bba895; --dim:#8a7765;
+  --accent:#c98b52; --accent2:#e0ad78; --brown:#6b3d1f;
+  --btn:#a5612c; --btn2:#7c4219;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,sans-serif;font-weight:500;line-height:1.5;overflow-x:hidden;overflow-x:clip;padding-bottom:96px}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:11.5px}
+.label{display:inline-flex;align-items:center;gap:8px;color:var(--accent);margin-bottom:12px}
+.label::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+h1,h2,h3{font-weight:900;line-height:1.04;letter-spacing:-.02em}
+h2{font-size:clamp(30px,8vw,50px);margin-bottom:10px}
+h3{font-size:18px;line-height:1.25;font-weight:800;letter-spacing:-.01em}
+.acc{color:var(--accent2)}
+.muted{color:var(--muted)}
+section{padding:64px 0;overflow-x:clip}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px}
+
+/* buttons */
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:19px 22px;border-radius:999px;border:0;cursor:pointer;
+  background:linear-gradient(180deg,var(--btn),var(--btn2));color:#fff7ee;font:800 17px/1 Montserrat,sans-serif;text-decoration:none;
+  box-shadow:0 10px 30px -8px rgba(201,139,82,.55), inset 0 1px 0 rgba(255,255,255,.25);transition:transform .15s;position:relative;overflow:hidden}
+.btn::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);animation:shine 4.5s infinite}
+@keyframes shine{0%,70%{left:-60%}100%{left:130%}}
+.btn:active{transform:scale(.98)}
+.btn.dark{background:#120c08;box-shadow:0 10px 30px -10px rgba(0,0,0,.7)}
+.btn.dark::after{display:none}
+.note{text-align:center;color:var(--dim);font-size:13px;margin-top:12px}
+
+/* ticker */
+.ticker{border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;background:#0d0805}
+.ticker div{display:inline-block;padding:10px 0;animation:tick 30s linear infinite;color:var(--muted)}
+.ticker span{margin:0 16px}
+.ticker i{color:var(--accent);font-style:normal}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* hero */
+.hero{position:relative;padding:26px 0 10px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:560px;height:560px;right:-200px;top:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,139,82,.32),rgba(107,61,31,.14) 45%,transparent 70%)}
+.hero .wrap{position:relative}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:7px 14px 7px 7px;border:1px solid var(--line2);border-radius:999px;background:rgba(31,21,15,.7);font-size:13.5px;font-weight:700;margin-bottom:20px}
+.pill em{font-style:normal;background:var(--btn);color:#fff;border-radius:999px;padding:4px 10px;font-size:11px;font-weight:800;letter-spacing:.05em}
+.hero h1{font-size:clamp(26px,9.1vw,72px);text-transform:uppercase;letter-spacing:-.025em;position:relative;z-index:1}
+.hero .sub{margin-top:14px;color:var(--muted);position:relative;z-index:1}
+.hero-photo{position:relative;margin:-30px -18px 0;height:clamp(460px,126vw,680px);z-index:0}
+.hero-photo img{position:absolute;left:50%;bottom:0;transform:translateX(-50%);height:100%;width:auto;max-width:none;mix-blend-mode:lighten;
+  -webkit-mask-image:radial-gradient(ellipse 60% 62% at 50% 44%,#000 60%,transparent 100%);mask-image:radial-gradient(ellipse 60% 62% at 50% 44%,#000 60%,transparent 100%)}
+@keyframes float{50%{transform:translateY(-8px)}}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 16px}
+.feat div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 10px;text-align:center;font-size:12.5px;font-weight:700;line-height:1.25}
+.feat b{display:block;font-size:22px;margin-bottom:4px}
+
+.timer{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 12px;padding:11px 14px;border-radius:16px;
+  background:rgba(165,97,44,.14);border:1px solid rgba(224,173,120,.35);font-weight:700;font-size:14px;color:var(--accent2)}
+.timer .cd{font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:700;font-size:20px;letter-spacing:.04em;color:#fff3e4;background:#120c08;border-radius:10px;padding:5px 10px;min-width:118px;text-align:center}
+.timer.end .cd{color:#ffb38a;animation:pulse 1s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.45}}
+
+/* works */
+.reels-head{display:flex;justify-content:space-between;align-items:end}
+.reels-head small{color:var(--dim);font-size:12px;font-weight:700;white-space:nowrap;margin-bottom:14px}
+.reels{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 18px;margin:16px -18px 0;padding:4px 18px 14px;scrollbar-width:none}
+.reels::-webkit-scrollbar{display:none}
+.reel{flex:none;width:66%;max-width:270px;scroll-snap-align:start;margin:0}
+.reel .scr{position:relative;aspect-ratio:9/16;border-radius:24px;overflow:hidden;border:3px solid #2e2118;background:#000;box-shadow:0 18px 40px -16px rgba(0,0,0,.9)}
+.reel video{width:100%;height:100%;object-fit:cover;display:block}
+.reel .play{position:absolute;inset:0;display:grid;place-items:center;border:0;cursor:pointer;background:linear-gradient(to top,rgba(0,0,0,.5),transparent 45%)}
+.reel .play span{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;font-size:22px;color:#fff;padding-left:4px;
+  background:rgba(165,97,44,.85);box-shadow:0 0 0 8px rgba(165,97,44,.25);animation:ping 2.2s ease-out infinite}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(201,139,82,.5)}100%{box-shadow:0 0 0 18px rgba(201,139,82,0)}}
+.reel.on .play{display:none}
+.reel figcaption{margin-top:10px;font-weight:800;font-size:15px;line-height:1.3}
+.reel figcaption span{display:block;color:var(--dim);font-size:12.5px;font-weight:600}
+
+/* learn */
+.learn{display:grid;gap:12px;margin-top:22px}
+.learn .card{display:flex;gap:16px;align-items:flex-start;padding:22px}
+.learn .ic{flex:none;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:26px;background:var(--card2);border:1px solid var(--line2)}
+.learn p{color:var(--muted);font-size:15px;margin-top:6px}
+.learn .hot{background:linear-gradient(160deg,#8a5129,#6b3d1f 55%,#4a2914);border-color:rgba(255,220,180,.18)}
+.learn .hot p{color:#f3d6b8}
+.learn .hot .ic{background:rgba(18,10,5,.35);border-color:rgba(255,220,180,.2)}
+.tagnew{display:inline-block;font-size:10.5px;font-weight:900;letter-spacing:.06em;color:#5a3015;background:#fff1df;border-radius:999px;padding:3px 8px;margin-left:6px;vertical-align:middle}
+
+/* styles chips */
+.styles{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:14px}
+.styles .mono{color:var(--dim);margin-right:2px}
+.styles span:not(.mono){border:1px solid var(--line2);background:var(--card);border-radius:999px;padding:8px 13px;font-weight:700;font-size:13.5px}
+
+/* compare */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.compare .card{padding:18px 16px}
+.compare h4{margin-bottom:12px}
+.compare ul{list-style:none;display:grid;gap:10px}
+.compare li{display:flex;gap:8px;font-size:14px;font-weight:600;line-height:1.35}
+.compare .old li{color:var(--muted)}
+.compare .old li::before{content:"✕";color:#8a6a55;font-weight:800}
+.compare .new{background:linear-gradient(160deg,#8a5129,#6b3d1f 60%,#4a2914);border-color:rgba(255,220,180,.18)}
+.compare .new h4{color:#ffe7cc}
+.compare .new li::before{content:"✓";color:#ffd6a8;font-weight:900}
+
+/* steps */
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.steps .card{padding:18px 16px}
+.steps .n{color:var(--accent);display:block;margin-bottom:16px}
+.steps p{color:var(--muted);font-size:13.5px;margin-top:6px;line-height:1.4}
+
+/* bonus */
+.bonus{position:relative;border-radius:28px;overflow:hidden;padding:30px 22px 24px;
+  background:radial-gradient(120% 90% at 100% 0%,#9a5b2e 0%,#6b3d1f 38%,#3d2213 75%,#2a170c 100%);border:1px solid rgba(255,220,180,.16)}
+.bonus .gift{font-size:46px;line-height:1;margin-bottom:10px;display:inline-block;animation:float 4s ease-in-out infinite}
+.bonus h2{color:#fff3e4}
+.bonus p{color:#f0d9c0}
+.bonus .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.bonus .chips span{background:rgba(18,10,5,.35);border:1px solid rgba(255,220,180,.16);border-radius:999px;padding:9px 14px;font-weight:700;font-size:14px}
+.bonus .tag{position:absolute;right:16px;top:16px;background:#fff1df;color:#5a3015;border-radius:999px;padding:6px 12px;font-size:11px;font-weight:900;transform:rotate(6deg)}
+
+/* who */
+.who{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.who .card{padding:16px}
+.who .em{font-size:26px;line-height:1;margin-bottom:10px}
+.who p{color:var(--muted);font-size:13.5px;margin-top:4px;line-height:1.4}
+
+.notfor{margin-top:10px;padding:16px 18px;font-size:14px;color:var(--muted);border-style:dashed}
+.notfor b{color:var(--text)}
+
+/* about */
+.quote{margin-top:14px;padding-left:14px;border-left:3px solid var(--accent);font-weight:800;font-size:16.5px;line-height:1.35;color:var(--text)}
+.about-photo{position:relative;width:min(300px,78vw);aspect-ratio:1;margin:96px auto 24px}
+.about-photo::before{content:"";position:absolute;inset:0;border-radius:50%;z-index:0;background:radial-gradient(circle at 35% 30%,#b0703d,#6b3d1f 55%,#3a2011)}
+.about-photo::after{content:"";position:absolute;inset:-12px;border-radius:50%;z-index:0;border:1px dashed rgba(236,205,168,.22)}
+.about-photo .clip{position:absolute;inset:-30% 0 0 0;z-index:1;border-radius:0 0 50% 50% / 0 0 38.5% 38.5%;overflow:hidden}
+.about-photo img{position:absolute;left:50%;top:0;transform:translateX(-50%);height:112%;width:auto;max-width:none}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.facts .card{padding:15px}
+.facts b{display:block;font-size:23px;font-weight:900}
+.facts span{color:var(--dim);font-size:12.5px;font-weight:600}
+.ig{display:inline-flex;align-items:center;gap:8px;text-decoration:none;border:1px solid var(--line2);border-radius:999px;padding:9px 14px;font-weight:700;font-size:13.5px;background:var(--card);margin-top:14px}
+
+/* plans */
+.plans{display:grid;gap:16px;margin-top:18px}
+.plan{position:relative;background:var(--card);border:1px solid var(--line2);border-radius:26px;padding:24px 22px 22px;display:flex;flex-direction:column}
+.plan .pname{color:var(--accent);margin-bottom:10px}
+.plan .pp{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.plan .pp b{font-size:42px;font-weight:900;letter-spacing:-.03em;line-height:1}
+.plan .pp s{color:var(--dim);font-weight:700;font-size:16px}
+.plan .badge{background:#120c08;color:#ffd6a8;border:1px solid var(--line2);border-radius:999px;padding:4px 10px;font-size:12px;font-weight:900}
+.plan .pnote{color:var(--dim);font-size:13px;font-weight:600;margin-top:8px}
+.plan ul{list-style:none;display:grid;gap:9px;margin:16px 0 20px;flex:1}
+.plan li{display:flex;gap:10px;font-size:14.5px;font-weight:600;line-height:1.4}
+.plan li::before{content:"✓";color:var(--accent2);font-weight:900}
+.plan li b{color:#fff}
+.plan .btn{padding:17px 18px;font-size:16px}
+.plan.hot{background:linear-gradient(160deg,#a5642f,#6b3d1f 55%,#4a2914);border-color:rgba(255,220,180,.35);box-shadow:0 24px 60px -24px rgba(201,139,82,.7)}
+.plan.hot .pname,.plan.hot li::before{color:#ffd6a8}
+.plan.hot .pnote{color:#f3d6b8}
+.plan .ribbon{position:absolute;top:-13px;right:18px;background:#fff1df;color:#5a3015;border-radius:999px;padding:6px 12px;font-size:11.5px;font-weight:900;box-shadow:0 6px 16px -6px rgba(0,0,0,.6)}
+.flow2{display:grid;gap:8px;margin-top:18px}
+.flow2 div{display:flex;gap:12px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:13px 16px;font-size:14px;font-weight:600;color:var(--muted)}
+.flow2 b{color:var(--accent)}
+
+/* faq */
+.faq{margin-top:18px;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:19px 40px 19px 0;font-weight:800;font-size:16px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:24px;font-weight:600;transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq details p{color:var(--muted);padding:0 0 18px;font-size:15px}
+
+footer{padding:28px 0 20px;color:var(--dim);font-size:12.5px;text-align:center;border-top:1px solid var(--line)}
+
+/* sticky bar */
+.bar{position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom));z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:10px 10px 10px 20px;border-radius:999px;background:rgba(26,17,12,.88);border:1px solid var(--line2);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:0 16px 40px -12px rgba(0,0,0,.8);transform:translateY(140%);transition:transform .35s cubic-bezier(.2,.8,.2,1);max-width:560px;margin:0 auto}
+.bar.show{transform:none}
+.bar b{display:block;font-size:19px;font-weight:900;line-height:1.1}
+.bar span{font-size:11.5px;color:var(--dim);font-weight:600}
+.bar .btn{width:auto;padding:14px 22px;font-size:15.5px}
+
+.rv{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+
+@media (min-width:860px){
+  section{padding:96px 0}
+  .hero{padding-top:56px}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:end}
+  .hero-photo{margin:0;height:640px}
+  .learn{grid-template-columns:1fr 1fr}
+  .reels{margin:16px 0 0;padding:4px 0 14px;scroll-padding:0}
+  .reel{width:300px}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .who{grid-template-columns:repeat(4,1fr)}
+  .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+  .plans{grid-template-columns:repeat(3,1fr);align-items:stretch}
+  .flow2{grid-template-columns:repeat(3,1fr)}
+  .bonus{padding:52px 48px}
+}
+</style>
+</head>
+<body>
+
+<div class="ticker mono" aria-hidden="true"><div>
+  <span>Тек телефон</span><i>✦</i><span>ЖИ монтаждайды</span><i>✦</i><span>Түсірмей-ақ видео</span><i>✦</i><span>Қазақ тілінде</span><i>✦</i><span>Бонус: кинодағыдай жарық</span><i>✦</i>
+  <span>Тек телефон</span><i>✦</i><span>ЖИ монтаждайды</span><i>✦</i><span>Түсірмей-ақ видео</span><i>✦</i><span>Қазақ тілінде</span><i>✦</i><span>Бонус: кинодағыдай жарық</span><i>✦</i>
+</div></div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="pill"><em>ЖАҢА</em> 📱 Алғашқы курсым</div>
+      <h1>ЖИ арқылы рилсті <span class="acc">10 минутта</span> монтаждаңыз</h1>
+      <p class="sub">Тек телефонмен. Компьютерсіз. Сағаттап отырмай.</p>
+    </div>
+    <div class="hero-photo">
+      <img src="img/hero.webp" alt="Дінмохаммед Дәулетұлы" width="900" height="1267" fetchpriority="high">
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="feat">
+      <div><b>📱</b>Тек телефон</div>
+      <div><b>🤖</b>ЖИ монтаждайды</div>
+      <div><b>🎁</b>Бонус сабақ</div>
+    </div>
+    <div class="timer"><span>⏳ Жеңілдік бітуіне:</span><span class="cd">24:00:00</span></div>
+    <a class="btn" href="#price">Курсты алу · 4 990 ₸-ден →</a>
+    <p class="note">Кейін — <s>9 990 ₸</s> · мәңгі қолжетімділік · Kaspi арқылы</p>
+  </div>
+</header>
+
+<!-- WORKS -->
+<section style="padding-top:44px">
+  <div class="wrap">
+    <div class="reels-head rv">
+      <div><div class="label mono">Нәтиже</div><h2>Менің <span class="acc">жұмыстарым</span></h2></div>
+      <small>сырғытыңыз →</small>
+    </div>
+    <div class="reels rv">
+      <figure class="reel"><div class="scr"><video src="video/reel1.mp4" poster="video/reel1.jpg" playsinline preload="none"></video><button class="play" aria-label="Көру"><span>▶</span></button></div><figcaption>Бұл видеоны ЖИ монтаждады<span>CapCut-қа қол тигізбей</span></figcaption></figure>
+      <figure class="reel"><div class="scr"><video src="video/reel2.mp4" poster="video/reel2.jpg" playsinline preload="none"></video><button class="play" aria-label="Көру"><span>▶</span></button></div><figcaption>Киношный жарық + анимация<span>мульт-кейіпкер, инфографика</span></figcaption></figure>
+      <figure class="reel"><div class="scr"><video src="video/reel3.mp4" poster="video/reel3.jpg" playsinline preload="none"></video><button class="play" aria-label="Көру"><span>▶</span></button></div><figcaption>B-roll + графика<span>анимация мен интерфейс</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- LEARN -->
+<section>
+  <div class="wrap">
+    <div class="rv">
+      <div class="label mono">Курста</div>
+      <h2>Не <span class="acc">үйренесіз</span></h2>
+    </div>
+    <div class="learn">
+      <div class="card rv"><div class="ic">🎬</div><div><h3>Өз видеоңызды монтаждау</h3><p>Субтитр, зум, жазулар, обложка — бәрін ЖИ жасайды.</p></div></div>
+      <div class="card hot rv"><div class="ic">✨</div><div><h3>Түсірмей-ақ видео <span class="tagnew">ЖАҢА</span></h3><p>Мәтін жазасыз — ЖИ дауыс, анимация, графика мен мульт өзі жасалады.</p></div></div>
+    </div>
+    <div class="styles rv"><span class="mono">5 стиль:</span><span>Қарапайым</span><span>Коллаж</span><span>Tech</span><span>Алтын</span><span>Мульт</span></div>
+    <a class="btn rv" style="margin-top:22px" href="#price">Үйренгім келеді →</a>
+  </div>
+</section>
+
+<!-- COMPARE -->
+<section style="padding-top:10px">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label mono">Айырмашылық</div>
+      <h2>Монтаж <span class="acc">енді басқаша</span></h2>
+    </div>
+    <div class="compare">
+      <div class="card old rv"><h4 class="mono" style="color:var(--dim)">Бұрын</h4><ul><li>Сағаттап CapCut</li><li>Әр субтитр — қолмен</li><li>Компьютер керек</li></ul></div>
+      <div class="card new rv"><h4 class="mono">Енді</h4><ul><li>«Монтаждап бер» — болды</li><li>Субтитр өзі шығады</li><li>Бәрі телефонда</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section style="padding-top:10px">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label mono">Қалай</div>
+      <h2>Видеодан рилске — <span class="acc">4 қадам</span></h2>
+    </div>
+    <div class="steps">
+      <div class="card rv"><span class="n mono">01</span><h3>Түсіресіз</h3><p>немесе мәтін жазасыз</p></div>
+      <div class="card rv"><span class="n mono">02</span><h3>ЖИ-ге жібересіз</h3><p>«Монтаждап бер»</p></div>
+      <div class="card rv"><span class="n mono">03</span><h3>Эскизді көресіз</h3><p>рендерге дейін түзетесіз</p></div>
+      <div class="card rv"><span class="n mono">04</span><h3>Дайын рилс</h3><p>галереяңызда</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BONUS -->
+<section style="padding-top:10px">
+  <div class="wrap">
+    <div class="bonus rv">
+      <div class="tag">ТЕГІН · КУРСПЕН</div>
+      <div class="gift">🎁</div>
+      <div class="label mono" style="color:#ffd6a8">Бонус сабақ</div>
+      <h2>Үйде <span style="color:#ffd6a8">кинодағыдай</span> түсіру</h2>
+      <p>Кәсіби жабдықсыз — тек үйдегі жарық пен телефон.</p>
+      <div class="chips"><span>🪟 Терезе жарығы</span><span>💡 Киношный көлеңке</span><span>📱 Камера баптауы</span></div>
+      <a class="btn dark" style="margin-top:20px" href="#price">Бонуспен бірге алу →</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section style="padding-top:10px">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label mono">Кімге</div>
+      <h2>Бұл курс <span class="acc">кімге</span></h2>
+    </div>
+    <div class="who">
+      <div class="card rv"><div class="em">🎥</div><h3>Мобилограф</h3><p>Тезірек монтаж — көбірек тапсырыс</p></div>
+      <div class="card rv"><div class="em">✨</div><h3>Блогер</h3><p>Күнде контент — шаршамай</p></div>
+      <div class="card rv"><div class="em">💼</div><h3>Бизнес иесі</h3><p>Өз бизнесіңізге рилс</p></div>
+      <div class="card rv"><div class="em">🚀</div><h3>Жаңадан бастаушы</h3><p>Нөлден, қадам-қадаммен</p></div>
+    </div>
+    <div class="card notfor rv"><b>❌ Сізге емес, егер</b> ештеңе істемей, дайын нәтиже күтсеңіз. Курс — әрекет ететіндерге.</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section style="padding-top:0">
+  <div class="wrap about-grid">
+    <div class="about-photo rv"><div class="clip"><img src="img/about.webp" alt="Дінмохаммед Дәулетұлы" width="733" height="1300" decoding="async"></div></div>
+    <div class="rv">
+      <div class="label mono">Мен кіммін</div>
+      <h2>Сәлем, мен <span class="acc">Дінмохаммед</span></h2>
+      <p class="muted">Мобилограф, рилсмейкер. Монтажды тек телефонмен, ЖИ арқылы жасаймын — соны сізге үйретемін.</p>
+      <p class="quote">«16 жастағы мен телефонмен жасай алсам — сіз де жасай аласыз»</p>
+      <div class="facts">
+        <div class="card"><b>16</b><span>жастамын</span></div>
+        <div class="card"><b>Астана</b><span>Талдықорғаннанмын</span></div>
+        <div class="card"><b>27K+</b><span>Instagram</span></div>
+        <div class="card"><b>46K+</b><span>TikTok</span></div>
+      </div>
+      <a class="ig" href="https://instagram.com/dauletuly.dimash" target="_blank" rel="noopener">📸 @dauletuly.dimash</a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section id="price" style="padding-top:20px">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label mono">Қатысу</div>
+      <h2>Тарифті <span class="acc">таңдаңыз</span></h2>
+    </div>
+    <div class="timer rv" style="margin-top:16px"><span>⏳ Жеңілдік бітуіне:</span><span class="cd">24:00:00</span></div>
+    <div class="plans">
+      <div class="plan rv">
+        <div class="pname mono">Базалық</div>
+        <div class="pp"><b>4 990 ₸</b><s>9 990 ₸</s><span class="badge">−50%</span></div>
+        <p class="pnote">Алғашқы курсым болғандықтан — кейін 9&nbsp;990&nbsp;₸</p>
+        <ul>
+          <li>Телефонмен ЖИ монтаж</li>
+          <li>Түсірмей-ақ видео: дауыс, анимация, мульт</li>
+          <li>Бонус: үйде кинодағыдай түсіру</li>
+          <li>Дайын шаблон мен скиллдер</li>
+          <li>Мәңгі қолжетімділік</li>
+        </ul>
+        <a class="btn wa" data-plan="Базалық" href="#" target="_blank" rel="noopener">Базалықты алу →</a>
+      </div>
+      <div class="plan hot rv">
+        <div class="ribbon">🔥 Ең тиімді</div>
+        <div class="pname mono">Талдау</div>
+        <div class="pp"><b>14 990 ₸</b></div>
+        <p class="pnote">Курс + менің жеке кері байланысым</p>
+        <ul>
+          <li><b>Базалықтың бәрі</b></li>
+          <li>3 видеоңызды жеке талдаймын</li>
+          <li>Әр видеоға нақты кеңес: монтаж, жарық, хук</li>
+        </ul>
+        <a class="btn dark wa" data-plan="Талдау" href="#" target="_blank" rel="noopener">Талдауды алу →</a>
+      </div>
+      <div class="plan rv">
+        <div class="pname mono">VIP</div>
+        <div class="pp"><b>25 000 ₸</b></div>
+        <p class="pnote">Жеке сабақ — бірге баптаймыз</p>
+        <ul>
+          <li><b>Талдаудың бәрі</b></li>
+          <li>1 сағат жеке Zoom-сабақ</li>
+          <li>Бәрін бірге баптап, сұрақтарыңызға жауап беремін</li>
+        </ul>
+        <a class="btn wa" data-plan="VIP" href="#" target="_blank" rel="noopener">VIP алу →</a>
+      </div>
+    </div>
+    <div class="flow2 rv"><div><b class="mono">01</b>Тарифті таңдап, WhatsApp-қа жазасыз</div><div><b class="mono">02</b>Kaspi-ге аударып, чек жібересіз</div><div><b class="mono">03</b>Курсқа сілтеме аласыз</div></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="rv">
+      <div class="label mono">Сұрақтар</div>
+      <h2>Жиі сұрайтындар</h2>
+    </div>
+    <div class="faq rv">
+      <details open><summary>Монтажды мүлде білмеймін — түсінемін бе?</summary><p>Иә. Бәрі нөлден, телефон экранынан қадам-қадаммен.</p></details>
+      <details><summary>Компьютер керек пе?</summary><p>Жоқ. iPhone не Android жеткілікті.</p></details>
+      <details><summary>CapCut не басқа бағдарлама керек пе?</summary><p>Жоқ. Монтажды ЖИ жасайды — сіз тек не керек екенін жазасыз.</p></details>
+      <details><summary>Уақытым аз — үлгеремін бе?</summary><p>Иә. Сабақтарды өзіңізге ыңғайлы уақытта көресіз.</p></details>
+      <details><summary>Қолжетімділік қанша уақытқа?</summary><p>Мәңгі. Бір рет төлейсіз — сабақтарды кез келген уақытта қайта көресіз.</p></details>
+      <details><summary>Төлегеннен кейін не болады?</summary><p>Чекті жібересіз — курсқа кіру сілтемесін бірден аласыз.</p></details>
+      <details><summary>Қай тілде?</summary><p>Қазақ тілінде.</p></details>
+    </div>
+    <div style="margin-top:26px" class="rv">
+      <a class="btn" href="#price">Курсты алу · 4 990 ₸-ден →</a>
+      <p class="note">Сұрақ бар ма? <a class="wa-q" href="#" target="_blank" rel="noopener">WhatsApp-қа жазыңыз</a></p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">© 2026 Дінмохаммед Дәулетұлы · <a href="https://instagram.com/dauletuly.dimash" target="_blank" rel="noopener">@dauletuly.dimash</a></div></footer>
+
+<div class="bar" id="bar">
+  <div><b>4 990 ₸</b><span><s>9 990 ₸</s> · ⏳ <span class="cd-bar">24:00:00</span></span></div>
+  <a class="btn" href="#price">Алу →</a>
+</div>
+
+<script>
+(function(){
+  var PHONE = "77765002010";
+  var buy = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent("Сәлеметсіз бе! Курсты сатып алғым келеді 🙌");
+  var ask = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent("Сәлеметсіз бе! Курс туралы сұрағым бар.");
+  document.querySelectorAll("a.wa").forEach(function(a){
+    var plan = a.getAttribute("data-plan");
+    a.href = plan ? "https://wa.me/" + PHONE + "?text=" + encodeURIComponent("Сәлеметсіз бе! «" + plan + "» тарифін алғым келеді 🙌") : buy;
+  });
+  document.querySelectorAll("a.wa-q").forEach(function(a){ a.href = ask; });
+
+  // Кері санақ: әр келушіге алғашқы кіруден бастап 24 сағат, бетті жаңартқанда басынан басталмайды
+  var DUR = 24 * 3600 * 1000, KEY = "kurs_deadline_v2", now = Date.now(), end = 0;
+  try { end = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+  if (!end || now - end > 24 * 3600 * 1000) { end = now + DUR; try { localStorage.setItem(KEY, String(end)); } catch (e) {} }
+  var cds = document.querySelectorAll(".cd, .cd-bar"), timers = document.querySelectorAll(".timer"), iv;
+  function tick(){
+    var r = Math.max(0, Math.ceil((end - Date.now()) / 1000));
+    var t = [Math.floor(r / 3600), Math.floor(r % 3600 / 60), r % 60].map(function(n){ return String(n).padStart(2, "0"); }).join(":");
+    cds.forEach(function(el){ el.textContent = t; });
+    if (r <= 0) { timers.forEach(function(el){ el.classList.add("end"); }); clearInterval(iv); }
+  }
+  iv = setInterval(tick, 1000); tick();
+
+  document.querySelectorAll(".reel").forEach(function(r){
+    var v = r.querySelector("video");
+    r.querySelector(".play").addEventListener("click", function(){
+      document.querySelectorAll(".reel video").forEach(function(o){ if (o !== v) o.pause(); });
+      r.classList.add("on"); v.controls = true; v.play();
+    });
+  });
+
+  var bar = document.getElementById("bar"), hero = document.querySelector(".hero"), price = document.getElementById("price");
+  function onScroll(){
+    var pr = price.getBoundingClientRect();
+    var inPrice = pr.top < innerHeight * .6 && pr.bottom > innerHeight * .3;
+    bar.classList.toggle("show", scrollY > hero.offsetHeight * .7 && !inPrice);
+  }
+  addEventListener("scroll", onScroll, {passive:true}); onScroll();
+
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, {rootMargin:"0px 0px -8% 0px"});
+    document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+  } else {
+    document.querySelectorAll(".rv").forEach(function(el){ el.classList.add("in"); });
+  }
+})();
+</script>
+</body>
+</html>
