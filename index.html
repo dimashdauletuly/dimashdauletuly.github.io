@@ -253,7 +253,7 @@ footer{padding:28px 0 20px;color:var(--dim);font-size:12.5px;text-align:center;b
     </div>
     <div class="timer"><span>⏳ Жеңілдік бітуіне:</span><span class="cd">24:00:00</span></div>
     <a class="btn" href="#price">Курсты алу · 4 990 ₸-ден →</a>
-    <p class="note">Кейін — <s>9 990 ₸</s> · мәңгі қолжетімділік · Kaspi арқылы</p>
+    <p class="note" id="heroNote">Кейін — <s>9 990 ₸</s> · <b style="color:var(--accent2)">26 қараша, 19:00-ге дейін</b> · Kaspi арқылы</p>
   </div>
 </header>
 
@@ -381,8 +381,8 @@ footer{padding:28px 0 20px;color:var(--dim);font-size:12.5px;text-align:center;b
     <div class="plans">
       <div class="plan rv">
         <div class="pname mono">Базалық</div>
-        <div class="pp"><b>4 990 ₸</b><s>9 990 ₸</s><span class="badge">−50%</span></div>
-        <p class="pnote">Алғашқы курсым болғандықтан — кейін 9&nbsp;990&nbsp;₸</p>
+        <div class="pp" id="basicPrice"><b>4 990 ₸</b><s>9 990 ₸</s><span class="badge">−50%</span></div>
+        <p class="pnote" id="basicNote">26 қараша, 19:00-ге дейін — кейін 9&nbsp;990&nbsp;₸</p>
         <ul>
           <li>Телефонмен ЖИ монтаж</li>
           <li>Түсірмей-ақ видео: дауыс, анимация, мульт</li>
@@ -446,7 +446,7 @@ footer{padding:28px 0 20px;color:var(--dim);font-size:12.5px;text-align:center;b
 <footer><div class="wrap">© 2026 Дінмохаммед Дәулетұлы · <a href="https://instagram.com/dauletuly.dimash" target="_blank" rel="noopener">@dauletuly.dimash</a></div></footer>
 
 <div class="bar" id="bar">
-  <div><b>4 990 ₸</b><span><s>9 990 ₸</s> · ⏳ <span class="cd-bar">24:00:00</span></span></div>
+  <div id="barPrice"><b>4 990 ₸</b><span><s>9 990 ₸</s> · ⏳ <span class="cd-bar">24:00:00</span></span></div>
   <a class="btn" href="#price">Алу →</a>
 </div>
 
@@ -461,16 +461,23 @@ footer{padding:28px 0 20px;color:var(--dim);font-size:12.5px;text-align:center;b
   });
   document.querySelectorAll("a.wa-q").forEach(function(a){ a.href = ask; });
 
-  // Кері санақ: әр келушіге алғашқы кіруден бастап 24 сағат, бетті жаңартқанда басынан басталмайды
-  var DUR = 24 * 3600 * 1000, KEY = "kurs_deadline_v2", now = Date.now(), end = 0;
-  try { end = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
-  if (!end || now - end > 24 * 3600 * 1000) { end = now + DUR; try { localStorage.setItem(KEY, String(end)); } catch (e) {} }
-  var cds = document.querySelectorAll(".cd, .cd-bar"), timers = document.querySelectorAll(".timer"), iv;
+  // Кері санақ: барлығына ортақ мерзім — 26 қараша, 19:00 (Астана уақыты).
+  // Мерзім біткенде сайт өзі 9 990 ₸ бағасын көрсетеді.
+  var end = Date.parse("2026-11-26T19:00:00+05:00"), iv;
+  var cds = document.querySelectorAll(".cd, .cd-bar"), timers = document.querySelectorAll(".timer");
+  function after(){
+    timers.forEach(function(el){ el.style.display = "none"; });
+    document.querySelectorAll("a.btn").forEach(function(a){ a.textContent = a.textContent.replace("4 990 ₸", "9 990 ₸"); });
+    var n = document.getElementById("heroNote"); if (n) n.textContent = "Мәңгі қолжетімділік · Kaspi арқылы";
+    var bp = document.getElementById("basicPrice"); if (bp) bp.innerHTML = "<b>9 990 ₸</b>";
+    var bn = document.getElementById("basicNote"); if (bn) bn.textContent = "Мәңгі қолжетімділік";
+    var bb = document.getElementById("barPrice"); if (bb) bb.innerHTML = "<b>9 990 ₸</b><span>мәңгі қолжетімділік</span>";
+  }
   function tick(){
     var r = Math.max(0, Math.ceil((end - Date.now()) / 1000));
     var t = [Math.floor(r / 3600), Math.floor(r % 3600 / 60), r % 60].map(function(n){ return String(n).padStart(2, "0"); }).join(":");
     cds.forEach(function(el){ el.textContent = t; });
-    if (r <= 0) { timers.forEach(function(el){ el.classList.add("end"); }); clearInterval(iv); }
+    if (r <= 0) { clearInterval(iv); after(); }
   }
   iv = setInterval(tick, 1000); tick();
 
